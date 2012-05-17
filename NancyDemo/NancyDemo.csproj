@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09BE7BD6-1B00-4A15-A77B-CF9F2E427071}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NancyDemo</RootNamespace>
+    <AssemblyName>NancyDemo</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Nancy">
+      <HintPath>..\packages\Nancy.0.11.0\lib\net40\Nancy.dll</HintPath>
+    </Reference>
+    <Reference Include="Nancy.Hosting.Aspnet">
+      <HintPath>..\packages\Nancy.Hosting.Aspnet.0.11.0\lib\net40\Nancy.Hosting.Aspnet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap-responsive.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\glyphicons-halflings-white.png" />
+    <Content Include="Content\images\glyphicons-halflings.png" />
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\less\accordion.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>accordion.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\alerts.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>alerts.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\bootstrap.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bootstrap.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\breadcrumbs.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>breadcrumbs.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\button-groups.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>button-groups.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\buttons.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>buttons.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\carousel.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carousel.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\close.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>close.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\code.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>code.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\component-animations.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>component-animations.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\dropdowns.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dropdowns.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\forms.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>forms.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\grid.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>grid.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\hero-unit.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hero-unit.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\labels-badges.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>labels-badges.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\layouts.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>layouts.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\mixins.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\modals.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>modals.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\navbar.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>navbar.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\navs.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>navs.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\pager.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pager.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\pagination.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pagination.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\popovers.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>popovers.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\progress-bars.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>progress-bars.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\reset.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reset.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\responsive-1200px-min.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>responsive-1200px-min.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\responsive-767px-max.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>responsive-767px-max.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\responsive-768px-979px.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>responsive-768px-979px.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\responsive-navbar.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>responsive-navbar.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\responsive-utilities.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>responsive-utilities.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\responsive.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>responsive.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\scaffolding.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>scaffolding.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\sprites.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sprites.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\tables.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tables.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\thumbnails.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thumbnails.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\tooltip.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>tooltip.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\type.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>type.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\utilities.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>utilities.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\variables.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\wells.css">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>wells.less</DependentUpon>
+    </Content>
+    <Content Include="Content\Scripts\bootstrap.js" />
+    <Content Include="Content\Scripts\bootstrap.min.js" />
+    <Content Include="Content\Scripts\jquery-1.7.2-vsdoc.js" />
+    <Content Include="Content\Scripts\jquery-1.7.2.js" />
+    <Content Include="Content\Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Content\Scripts\less.min.js" />
+    <Content Include="Content\Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Content\Scripts\knockout-2.1.0.js" />
+    <Content Include="Views\index.html" />
+    <Content Include="Views\spec.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\CommunityEvent.cs" />
+    <Compile Include="Models\Entity.cs" />
+    <Compile Include="Models\Meeting.cs" />
+    <Compile Include="Models\Repository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\communityevents.json" />
+    <None Include="App_Data\meetings.json" />
+    <None Include="Content\less\accordion.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>accordion.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\alerts.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>alerts.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\bootstrap.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>bootstrap.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\breadcrumbs.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>breadcrumbs.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\button-groups.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>button-groups.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\buttons.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>buttons.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\carousel.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>carousel.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\close.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>close.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\code.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>code.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\component-animations.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>component-animations.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\dropdowns.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>dropdowns.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\forms.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>forms.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\grid.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>grid.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\hero-unit.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>hero-unit.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\labels-badges.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>labels-badges.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\layouts.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>layouts.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\mixins.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>mixins.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\modals.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>modals.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\navbar.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>navbar.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\navs.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>navs.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\pager.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>pager.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\pagination.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>pagination.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\popovers.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>popovers.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\progress-bars.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>progress-bars.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\reset.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>reset.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\responsive-1200px-min.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>responsive-1200px-min.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\responsive-767px-max.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>responsive-767px-max.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\responsive-768px-979px.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>responsive-768px-979px.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\responsive-navbar.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>responsive-navbar.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\responsive-utilities.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>responsive-utilities.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\responsive.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>responsive.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\scaffolding.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>scaffolding.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\sprites.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>sprites.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\tables.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>tables.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\thumbnails.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>thumbnails.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\tooltip.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>tooltip.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\type.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>type.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\utilities.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>utilities.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\variables.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>variables.css</LastGenOutput>
+    </None>
+    <None Include="Content\less\wells.less">
+      <Generator>LessGenerator</Generator>
+      <LastGenOutput>wells.css</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6704</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

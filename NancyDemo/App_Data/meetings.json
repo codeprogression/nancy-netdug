@@ -1,0 +1,33 @@
+[
+	{ "id": 6, "date": "/Date(1340258400000)/", "topics": [ 
+		{"title": "Fun with Powershell", "speaker": "Adam Clark"}
+	]},
+
+	{ "id": 5, "date": "/Date(1337234400000)/", "topics": [ 
+		{"title":"NancyFX", "speaker": "Richard Cirerol", "description": "Learn about the exciting open-source micro-framework for building .NET web applications"}
+	]},
+	
+	{ "id": 4, "date": "/Date(1334815200000)/", "topics": [ 
+		{"title": "Claims-Based Identities", "speaker": "Steve Reece"}
+	]},
+	
+	{ "id": 3, "date": "/Date(1331791200000)/", "topics": [ 
+		{"title": "Deploying to Azure", "speaker": "Scott Nichols"}
+	]},
+	
+	{ "id": 2, "date": "/Date(1329375600000)/", "topics": [ 
+		{"title": "Web Testing with Selenium Page Objects", "speaker": "Adam Clark"},
+		{"title": "Infinite Bitmaps with GDI+", "speaker": "Paul Schaffer"},
+		{"title": "Cool Tools", "speaker": "Chris Brandsma"}
+	]},
+	
+	{ "id": 1, "date": "/Date(1329375600000)/", "topics": [ 
+		{"title": "Knockout.js", "speaker": "Joel Feaster"},
+		{"title": "Jenkins", "speaker": "Richard Clements (Bob the Janitor)"},
+		{"title": "Protobuf.net", "speaker": "Paul Schaffer"}
+	]},
+		
+	{ "id": 0, "date": "/Date(1321513200000)/", "topics": [ 
+		{"title": "Open Spaces"}
+	]}
+]
