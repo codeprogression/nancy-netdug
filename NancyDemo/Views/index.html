@@ -61,9 +61,25 @@
 
         <section id="Home">
             <div class="hero-unit ">
-                <h1>UNDER CONSTRUCTION!</h1>
-                <p>Should list the topics for the current month and the next month</p>
-                <a href="/spec#Home">See specification</a>
+                 <!-- DISPLAY CURRENT MONTH'S TOPIC -->
+                <div class="alert alert-info ">
+                    <h1 class="alert-heading pull-right">@Model.CurrentMonth.Date</h1>
+                    <ul class="unstyled">
+                        @Each.CurrentMonth.Topics
+                        <li><h2>@Current.Title <small>@Current.Speaker</small></h2><p class="lead">@Current.Description</p></li>
+                        @EndEach
+                    </ul>
+                </div>
+
+                <!-- DISPLAY NEXT MONTH'S TOPIC -->
+                <div class="well well-small">
+                    <h2 class="alert-heading pull-right">@Model.NextMonth.Date</h1>
+                    <ul class="unstyled">
+                        @Each.NextMonth.Topics
+                        <li><h3>@Current.Title <small>@Current.Speaker</small></h2><p class="lead">@Current.Description</p></li>
+                        @EndEach
+                    </ul>
+                </div>
             </div>
         </section>
         
@@ -91,10 +107,19 @@
                     <button class="btn btn-primary pull-right">Add Speaker</button>    </h1> 
             </header>
             <div class="row-fluid">
-                
-                <h1>UNDER CONSTRUCTION!</h1>
-                <p>Should list the schedule for each year</p>
-                    <a href="/spec#Schedule">See specification</a>
+              <!--  @Each.YearlySchedule
+                <div class="span6">
+                    <h3>@Current.Year</h3>
+                    @Each.Meetings
+                    <dl class="dl-horizontal" >
+                        <dt>@Current.Date</dt>
+                        @Each.Topics
+                        <dd><h4>@Current.Title <small>@Current.Speaker</small></h4></dd>
+                        @EndEach $1$Topic #1#
+                    </dl>
+                    @EndEach $1$Month #1#
+                </div>  
+                @EndEach $1$Year #1#-->
             </div>
         </section>
         
@@ -112,9 +137,9 @@
                     <tr><th>When</th><th>What</th><th>Where</th><th></th></tr>
                 </thead>
                 <tbody>
-                    <h1>UNDER CONSTRUCTION!</h1>
-                    <p>Should list community events</p>
-                    <a href="/spec#Events">See specification</a>
+                    @Each.Events
+                    <tr><td>@Current.Date</td><td>@Current.Name</td><td>@Current.Location</td><td><a target="blank" href="@Current.Url" class="btn btn-info btn-small "><i class="icon-info-sign icon-white"></i> More Info</a></td></tr>
+                   @EndEach
                 </tbody>
             </table>
         </section>

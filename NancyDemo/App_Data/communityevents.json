@@ -1,4 +1,1 @@
-﻿[
-	{"id": "0", "name": "Portland Code Camp", "date": "June 2, 2012", "location": "Eliot Center, Portland, Oregon", "url": "http://portlandcodecamp.org"},
-	{"id": "1", "name": "Seattle Code Camp", "date": "June 16, 2012", "location": "DigiPen, Redmond, Washington", "url": "http://portlandcodecamp.org"}
-]
+[{"Id":0,"Name":"Portland Code Camp","Date":"June 2, 2012","Location":"Eliot Center, Portland, Oregon","Url":"http://portlandcodecamp.org"},{"Id":1,"Name":"Seattle Code Camp","Date":"June 16, 2012","Location":"DigiPen, Redmond, Washington","Url":"http://portlandcodecamp.org"},{"Id":2,"Name":"Boise Code Camp","Date":"March 16, 2013","Location":"Boise State University","Url":"http://www.boisecodecamp.com"},{"Id":3,"Name":"Drinks","Date":"Now","Location":"The Ram","Url":null},{"Id":4,"Name":"Coffee","Date":"Soon","Location":"Flying M","Url":null}]
